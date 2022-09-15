@@ -24,7 +24,7 @@ const generateData = async() => {
     email: "leonel.ponce@academlo.com",
     password: "$2b$10$TNGcRFonQH98rVqFaBVfpOEEv2Xcu5ej14tWqKim3z3L6Tr.ZIaqC",
     phone: "1234567890",
-    birthdayDate: "1997/09/12",
+    birthdayDate: "1997-09-12",
     dni: "",
     address: "",
     roleId: "5ee551ed-7bf4-44b0-aeb5-daaa824b9473",
