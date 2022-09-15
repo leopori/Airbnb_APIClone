@@ -9,6 +9,7 @@ require("./middleware/auth.middleware")(passport);
 const userRouter = require("./users/users.router").router;
 const authRouter = require("./auth/auth.router").router;
 const accomodationRouter = require("./accommodations/accommodations.router").router
+const reservationRouter = require('./reservations/reservations.router').router
 
 const Accommodations = require('./models/accommodations.model')
 const initModels = require('./models/initModels')
@@ -78,6 +79,7 @@ app.get("/", async (req, res) => {
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/accommodations", accomodationRouter)
+app.use("/api/v1/reservations", reservationRouter)
 app.use("/v1/doc", swaggerUi.serve, swaggerUi.setup(swaggerDoc))
 
 app.get("/api/v1/uploads/:imgName", (req ,res) => {

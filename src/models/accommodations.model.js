@@ -3,10 +3,10 @@ const { DataTypes } = require("sequelize");
 const { db } = require("../utils/database");
 
 const Accommodations = db.define("accommodations", {
-  id: { 
-    primaryKey: true, 
-    type: DataTypes.UUID, 
-    allowNull: false 
+  id: {
+    primaryKey: true,
+    type: DataTypes.UUID,
+    allowNull: false
   },
   title: { allowNull: false, type: DataTypes.STRING },
   description: { allowNull: false, type: DataTypes.TEXT },

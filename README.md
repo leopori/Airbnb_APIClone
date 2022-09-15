@@ -1,4 +1,6 @@
-# Rutas
+Proyecto con la idea de crear un clon de Airbnb. 
+
+# Rutas Existentes 
 
 - /api/v1/users
 - /api/v1/users/:id
@@ -94,7 +96,9 @@
 - PATCH
 
 /:id/available/?arrival=value&departure=value
-- GET 
 
-# Ejemplo de documentacion 
-https://petstore.swagger.io/v2/swagger.json
+-GET
+/api/v1/accommodations/:id/make-reservation
+
+-POST
+
