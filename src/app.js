@@ -19,7 +19,7 @@ const swaggerDoc = require('./swagger.json')
 //* Configuraciones iniciales
 
 const {db} = require('./utils/database')
-
+const PORT = process.env.PORT || 8000;
 //* Configuraciones iniciales
 const app = express();
 
@@ -29,21 +29,12 @@ db.authenticate()
   .then(() => console.log('Database Authenticated'))
   .catch(err => console.log(err))
 
-if(process.env.NODE_ENV === 'production'){
-  db.sync() 
-    .then(() => {
-      console.log('Database synced')
-      defaultData()
-    })
-    .catch(err => console.log(err))
-} else{
-  db.sync({force:true})
-    .then(() => {
-      console.log('Database synced')
-      defaultData()
-    })
-    .catch(err => console.log(err))
-  }
+
+  db.sync({ force: true })
+  .then(() => {
+    defaultData();
+  })
+  .catch((err) => console.log(err));
 
 
 //? Esta configuracion es para habilitar el req.body
