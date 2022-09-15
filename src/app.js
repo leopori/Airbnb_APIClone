@@ -44,8 +44,8 @@ app.use(express.json());
 
 app.get("/", async (req, res) => {
   
-    res.status(200).json({ message: "All ok!", data });
-   
+    res.status(200).json({ message: "All ok!"});
+   console.log(req)
   }
 //res.status(200).json({ message: "All ok!" });
 );
